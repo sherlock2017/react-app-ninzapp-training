@@ -25,8 +25,8 @@ function FirstScreen(props) {
                 uri: "https://freepngimg.com/thumb/pizza/1-pizza-png-image-thumb.png"
             }} />            
             <AppButton title="Add Pizza" color="tomato" onPress={increment} />
-            {/* {count != 0 && <AppButton title="Clear Cart" color="dodgerblue" onPress={clearCart} />}
-            {count != 0 && <Text style={styles.cart}>Pizza Cart</Text>} */}
+            {count != 0 && <AppButton title="Clear Cart" color="dodgerblue" onPress={clearCart} /> }
+            {count != 0 && <Text style={styles.cart}>Pizza Cart</Text> }
             {count != 0 && <Text style={styles.cartCount}>{ count }</Text>}
         </Screen>
     );
@@ -44,10 +44,10 @@ const styles = StyleSheet.create({
     cart: {
         fontSize: 30,
         padding: 2,
-        fontWeight: 500
+        //fontWeight: 500
     },
     cartCount: {
         fontSize: 90,
-        fontWeight: 600
+        //fontWeight: 600
     }
 })
