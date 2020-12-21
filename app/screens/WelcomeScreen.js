@@ -1,6 +1,7 @@
 import React from 'react';
 import { Alert, ImageBackground, Image, Text, StyleSheet, View } from 'react-native';
 import AppButton from '../components/AppButton';
+import AppText from '../components/AppText';
 import BrandColors from '../config/BrandColors';
 
 function WelcomeScreen(props) {
@@ -22,7 +23,7 @@ function WelcomeScreen(props) {
                 />
 
                 {/* tagline */}
-                <Text style={styles.tagline}>Pizza Anytime</Text>
+                <AppText style={styles.tagline}>Pizza Anytime</AppText>
 
                 {/* login */}
                 <AppButton title="Login" color="primary" onPress={() =>
