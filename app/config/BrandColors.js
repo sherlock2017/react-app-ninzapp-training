@@ -4,6 +4,6 @@ export default {
     black: "#000",
     white: "#fff",
     light: "lightblue",
-    medium: "lightOrange",
+    medium: "#e0e0e0",
     dark: "darkpurple"
 }

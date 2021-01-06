@@ -1,6 +1,6 @@
 import React from 'react';
 import Screen from '../components/Screen';
-import { FlatList } from 'react-native';
+import { FlatList, StyleSheet } from 'react-native';
 import AppCard from '../components/AppCard';
 
 const pizzaList = [
@@ -26,10 +26,10 @@ const pizzaList = [
 
 function PizzaListingScreen(props) {
     return (
-        <Screen>
+        <Screen style={styles.container}> 
             <FlatList
                 data={pizzaList}
-                keyExtractor={item => item.id}
+                keyExtractor={item => item.id.toString()}
                 renderItem={({ item }) =>
                 <AppCard
                 item={item}
@@ -42,3 +42,10 @@ function PizzaListingScreen(props) {
 }
 
 export default PizzaListingScreen;
+
+const styles = StyleSheet.create({
+  container: {
+    justifyContent: "center",
+    alignItems: "center"
+  }
+});

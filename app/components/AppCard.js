@@ -10,7 +10,7 @@ function AppCard({item, onPress}) {
             uri: item.imageUri
             }}/>
             <View style={styles.details}>
-                <AppText style={styles.title} numberOfLines={2}>{item.title}</AppText>
+                <AppText style={styles.title} numberOfLines={1}>{item.title}</AppText>
                 <AppText style={styles.price}>{item.price}</AppText>
             </View>
         </TouchableOpacity>
@@ -19,6 +19,7 @@ function AppCard({item, onPress}) {
 
 const styles = StyleSheet.create({
     card: {
+      width: "98%",
       borderRadius: 15,
       marginBottom: 20,
       backgroundColor: BrandColors.white,

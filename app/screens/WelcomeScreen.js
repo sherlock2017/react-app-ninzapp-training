@@ -9,9 +9,7 @@ function WelcomeScreen(props) {
         <ImageBackground
             blurRadius={8}
             style={styles.background}
-            source={{
-                uri: "https://www.itl.cat/pngfile/big/297-2975386_pizza-for-mobile-pizza-wallpaper-for-mobile.jpg"
-            }}
+            source={require("../../assets/welcome_bg.jpg")}
         >
             <View style={styles.container}>
                 {/* logo */}
