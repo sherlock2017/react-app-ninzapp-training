@@ -4,10 +4,12 @@ import { View, Image, StyleSheet, TouchableHighlight } from 'react-native';
 import BrandColors from '../config/BrandColors';
 import AppText from './AppText';
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import Swipeable from 'react-native-gesture-handler/Swipeable';
 
-function AppListItem({imageUrl, onPress, snippet, title}) {
+function AppListItem({imageUrl, onPress, snippet, title, renderRightActions}) {
     return (
-        <TouchableHighlight
+        <Swipeable renderRightActions={renderRightActions}>
+             <TouchableHighlight
             underlayColor={BrandColors.medium}
             onPress={onPress}>
                 <View style={styles.container}>
@@ -18,9 +20,10 @@ function AppListItem({imageUrl, onPress, snippet, title}) {
                     <AppText style={styles.title}>{title}</AppText>
                     <AppText style={styles.snippet} numberOfLines={1}>{snippet}</AppText>
                 </View>
-                    <MaterialCommunityIcons color={BrandColors.black} size={25} name="chevron-left" />
+                    <MaterialCommunityIcons color={BrandColors.black} size={25} name="chevron-right" />
                 </View>
         </TouchableHighlight>
+        </Swipeable>
     );
 }
 
@@ -45,9 +48,9 @@ const styles = StyleSheet.create({
     title: {
         fontWeight: "500",
         fontSize: 20,
-        color: BrandColors.black
+        color: BrandColors.secondary
     },
     snippet: {
-        
+        color: BrandColors.black
     }
 })
