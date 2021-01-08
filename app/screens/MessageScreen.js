@@ -44,7 +44,7 @@ function MessageScreen(props) {
 
     const handleDelete = (item) => {
         setMessages(messages.filter(m => m.id != item.id));
-    }A
+    }
 
     const handleRefresh = () => {
         setMessages([
