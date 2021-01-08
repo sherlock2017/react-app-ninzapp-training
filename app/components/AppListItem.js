@@ -6,9 +6,11 @@ import AppText from './AppText';
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import Swipeable from 'react-native-gesture-handler/Swipeable';
 
-function AppListItem({imageUrl, onPress, snippet, title, renderRightActions}) {
+function AppListItem({imageUrl, onPress, snippet, title, renderRightActions, renderLeftActions}) {
     return (
-        <Swipeable renderRightActions={renderRightActions}>
+        <Swipeable
+            renderRightActions={renderRightActions}
+            renderLeftActions={renderLeftActions}>
              <TouchableHighlight
             underlayColor={BrandColors.medium}
             onPress={onPress}>
@@ -52,5 +54,9 @@ const styles = StyleSheet.create({
     },
     snippet: {
         color: BrandColors.black
+    },
+    test: {
+        width: "100%",
+        backgroundColor: "green"
     }
 })

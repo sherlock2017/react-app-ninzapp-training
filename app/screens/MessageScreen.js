@@ -44,13 +44,13 @@ function MessageScreen(props) {
 
     const handleDelete = (item) => {
         setMessages(messages.filter(m => m.id != item.id));
-    }
+    }A
 
     const handleRefresh = () => {
         setMessages([
             {
-                id: 6,
-                title: "Refresh Guy",
+                id: messages.length + 1,
+                title: "Refresh Guy " + (messages.length + 1),
                 snippet: "Hi",
                 imageUrl: "https://lh3.googleusercontent.com/proxy/eBbYEVPFcGu8kVuxJ8xVCM_Pp4oxj5bzm3_Ie0c4fGcXWzxaJCfvn6MBVJpI2HZ2v9YLfXPkMx2YMrQz0DHJy1DGqdrODlv5saUorST2Ev3AePDgcg"
             },
@@ -69,6 +69,7 @@ function MessageScreen(props) {
                         title={item.title}
                         snippet={item.snippet}
                         renderRightActions={() => <AppListItemDeleteAction onPress={() => handleDelete(item)} />}
+                        renderLeftActions={() => <AppListItemDeleteAction onPress={() => handleDelete(item)} />}
                         onPress={() => alert("Message Pressed")}
                     />
                 }
